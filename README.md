@@ -82,111 +82,26 @@ Este enfoque es especialmente útil en documentación técnica donde los **térm
 
 ---
 
-# 📂 Estructura del Proyecto
+## 📂 Estructura del Proyecto
+
+```text
 fanuc-rag-chatbot/
-│
-├── app.py
-│ Interfaz del chatbot en Streamlit
-│
-├── embeddings_pipeline.py
-│ Procesamiento de documentos y generación de embeddings
-│
-├── retrieval.py
-│ Lógica de búsqueda vectorial
-│
-├── prompt_builder.py
-│ Construcción del prompt con contexto recuperado
-│
-├── supabase_client.py
-│ Conexión y consultas a la base de datos
-│
+├── app.py                   # Interfaz del chatbot en Streamlit
+├── embeddings_pipeline.py    # Procesamiento de documentos y generación de embeddings
+├── retrieval.py             # Lógica de búsqueda vectorial
+├── prompt_builder.py        # Construcción del prompt con contexto recuperado
+├── supabase_client.py       # Conexión y consultas a la base de datos
 ├── data/
-│ └── manuals/
-│ Manuales técnicos FANUC
-│
-├── requirements.txt
-│
-└── README.md
+│   └── manuals/             # Manuales técnicos FANUC
+├── requirements.txt         # Dependencias del proyecto
+└── README.md                # Documentación
+
+---
 
 # ⚙️ Instalación
 
-## 1 Clonar el repositorio
+## 1. Clonar el repositorio
 
 ```bash
 git clone https://github.com/tu_usuario/fanuc-rag-chatbot.git
 cd fanuc-rag-chatbot
-
-## 2 Instalar dependencias
-```bash
-pip install -r requirements.txt
-
-## 3 Configurar variables de entorno
-```bash
-SUPABASE_URL=tu_supabase_url
-SUPABASE_KEY=tu_supabase_key
-GEMINI_API_KEY=tu_api_key
-
-# ▶️ Ejecutar la Aplicación
-Iniciar la aplicación con Streamlit:
-```bash
-streamlit run app.py
-
-Luego abrir en el navegador:
-```bash
-http://localhost:8501
-
-# 🔧 Casos de Uso
-```bash
-
-Este chatbot puede utilizarse para:
-
-Consultar errores y alarmas de robots
-
-Buscar procedimientos de programación
-
-Encontrar instrucciones de mantenimiento
-
-Navegar rápidamente manuales técnicos extensos
-
-Este enfoque puede aplicarse también a:
-
-Manuales de maquinaria industrial
-
-Documentación de PLC
-
-Sistemas de mantenimiento
-
-Bases de conocimiento técnicas
-
-# 🚀 Posibles Mejoras Futuras
-
-Algunas extensiones posibles del proyecto:
-
-Soporte para múltiples manuales simultáneamente
-
-Evaluación de calidad del sistema RAG
-
-Memoria conversacional
-
-Implementación de Hybrid Search avanzada
-
-Despliegue en nube (Docker / cloud)
-
-# 🏭 Aplicaciones en Industria
-
-Los sistemas RAG pueden utilizarse en entornos industriales para:
-
-Asistentes de mantenimiento
-
-Soporte técnico automatizado
-
-Sistemas de consulta de documentación técnica
-
-Asistentes de diagnóstico de equipos
-
-Este proyecto demuestra el potencial de IA aplicada al mantenimiento industrial y la ingeniería de confiabilidad.
-
-# 👤 Autor
-
-Gabriel Afredo Regali
-
