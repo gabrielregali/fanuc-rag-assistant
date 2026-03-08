@@ -86,8 +86,8 @@ Este enfoque es especialmente útil en documentación técnica donde los **térm
 
 1. **Clonar el repositorio:**
    ```bash
-git clone [https://github.com/tu_usuario/fanuc-rag-chatbot.git](https://github.com/tu_usuario/fanuc-rag-chatbot.git)
-cd fanuc-rag-chatbot
+   git clone https://github.com/tu_usuario/fanuc-rag-chatbot.git
+   cd fanuc-rag-chatbot
 
 2. **Instalar dependencias:**
    ```bash
@@ -107,21 +107,13 @@ cd fanuc-rag-chatbot
 
 ## 🚀 **🔧 Casos de Uso**
 Este chatbot puede utilizarse para:
-
-Consultar errores y alarmas de robots
-
-Buscar procedimientos de programación
-
-Encontrar instrucciones de mantenimiento
-
-Navegar rápidamente manuales técnicos extensos
+- Consultar errores y alarmas de robots
+- Buscar procedimientos de programación
+- Encontrar instrucciones de mantenimiento
+- Navegar rápidamente manuales técnicos extensos
 
 Este enfoque puede aplicarse también a:
-
-Manuales de maquinaria industrial
-
-Documentación de PLC
-
-Sistemas de mantenimiento
-
-Bases de conocimiento técnicas
+- Manuales de maquinaria industrial
+- Documentación de PLC
+- Sistemas de mantenimiento
+- Bases de conocimiento técnicas
