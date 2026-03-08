@@ -98,10 +98,11 @@ fanuc-rag-chatbot/
 
 ---
 
-# ⚙️ Instalación
-
-## 1. Clonar el repositorio
-
-```bash
-git clone https://github.com/tu_usuario/fanuc-rag-chatbot.git
+⚙️ Instalación
+1. Clonar el repositorio
+Bash
+git clone [https://github.com/tu_usuario/fanuc-rag-chatbot.git](https://github.com/tu_usuario/fanuc-rag-chatbot.git)
 cd fanuc-rag-chatbot
+2. Instalar dependencias
+Bash
+pip install -r requirements.txt
