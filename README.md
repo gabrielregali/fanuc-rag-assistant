@@ -82,7 +82,7 @@ Este enfoque es especialmente útil en documentación técnica donde los **térm
 
 ---
 
-## 🚀 **⚙️ Instalación**
+#  **⚙️ Instalación**
 
 1. **Clonar el repositorio:**
    ```bash
@@ -105,7 +105,7 @@ Este enfoque es especialmente útil en documentación técnica donde los **térm
 
 ---
 
-## 🚀 **🔧 Casos de Uso**
+#  **🔧 Casos de Uso**
 Este chatbot puede utilizarse para:
 - Consultar errores y alarmas de robots
 - Buscar procedimientos de programación
@@ -117,3 +117,6 @@ Este enfoque puede aplicarse también a:
 - Documentación de PLC
 - Sistemas de mantenimiento
 - Bases de conocimiento técnicas
+
+#  **👤 Autor**
+**Gabriel Alfredo Regali**
