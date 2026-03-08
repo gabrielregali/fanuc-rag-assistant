@@ -82,27 +82,47 @@ Este enfoque es especialmente útil en documentación técnica donde los **térm
 
 ---
 
-## 📂 Estructura del Proyecto
+## 🚀 **⚙️ Instalación**
 
-```text
-fanuc-rag-chatbot/
-├── app.py                   # Interfaz del chatbot en Streamlit
-├── embeddings_pipeline.py    # Procesamiento de documentos y generación de embeddings
-├── retrieval.py             # Lógica de búsqueda vectorial
-├── prompt_builder.py        # Construcción del prompt con contexto recuperado
-├── supabase_client.py       # Conexión y consultas a la base de datos
-├── data/
-│   └── manuals/             # Manuales técnicos FANUC
-├── requirements.txt         # Dependencias del proyecto
-└── README.md                # Documentación
+1. **Clonar el repositorio:**
+   ```Bash
+git clone [https://github.com/tu_usuario/fanuc-rag-chatbot.git](https://github.com/tu_usuario/fanuc-rag-chatbot.git)
+cd fanuc-rag-chatbot
+
+2. **Instalar dependencias:**
+   ```bash
+   pip install -r requirements.txt
+
+4. **Configurar secretos en .streamlit/secrets.toml:**
+   ```bash
+   GEMINI_API_KEY = "tu_api_key"
+   SUPABASE_URL = "tu_url"
+   SUPABASE_KEY = "tu_key"
+
+6. **Ejecutar:**
+   ```bash
+   streamlit run app.py
 
 ---
 
-⚙️ Instalación
-1. Clonar el repositorio
-Bash
-git clone [https://github.com/tu_usuario/fanuc-rag-chatbot.git](https://github.com/tu_usuario/fanuc-rag-chatbot.git)
-cd fanuc-rag-chatbot
-2. Instalar dependencias
-Bash
-pip install -r requirements.txt
+## 🚀 **🔧 Casos de Uso**
+   ```bash
+Este chatbot puede utilizarse para:
+
+Consultar errores y alarmas de robots
+
+Buscar procedimientos de programación
+
+Encontrar instrucciones de mantenimiento
+
+Navegar rápidamente manuales técnicos extensos
+
+Este enfoque puede aplicarse también a:
+
+Manuales de maquinaria industrial
+
+Documentación de PLC
+
+Sistemas de mantenimiento
+
+Bases de conocimiento técnicas
