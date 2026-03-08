@@ -85,7 +85,7 @@ Este enfoque es especialmente útil en documentación técnica donde los **térm
 ## 🚀 **⚙️ Instalación**
 
 1. **Clonar el repositorio:**
-   ```Bash
+   ```bash
 git clone [https://github.com/tu_usuario/fanuc-rag-chatbot.git](https://github.com/tu_usuario/fanuc-rag-chatbot.git)
 cd fanuc-rag-chatbot
 
@@ -106,7 +106,6 @@ cd fanuc-rag-chatbot
 ---
 
 ## 🚀 **🔧 Casos de Uso**
-   ```bash
 Este chatbot puede utilizarse para:
 
 Consultar errores y alarmas de robots
