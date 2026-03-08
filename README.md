@@ -117,21 +117,26 @@ git clone https://github.com/tu_usuario/fanuc-rag-chatbot.git
 cd fanuc-rag-chatbot
 
 ## 2 Instalar dependencias
+```bash
 pip install -r requirements.txt
 
 ## 3 Configurar variables de entorno
+```bash
 SUPABASE_URL=tu_supabase_url
 SUPABASE_KEY=tu_supabase_key
 GEMINI_API_KEY=tu_api_key
 
 # ▶️ Ejecutar la Aplicación
 Iniciar la aplicación con Streamlit:
+```bash
 streamlit run app.py
 
 Luego abrir en el navegador:
+```bash
 http://localhost:8501
 
 # 🔧 Casos de Uso
+```bash
 
 Este chatbot puede utilizarse para:
 
