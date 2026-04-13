@@ -11,7 +11,7 @@ st.set_page_config(page_title="Asistente Técnico FANUC", page_icon="🤖")
 SUPABASE_URL = st.secrets["SUPABASE_URL"]
 SUPABASE_KEY = st.secrets["SUPABASE_KEY"]
 GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
-ANTHROPIC_API_KEY = st.secrets["ANTHROPIC_API_KEY"]
+
 
 SIMILARITY_THRESHOLD = 0.55  # Fase de prueba
 
