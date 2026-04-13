@@ -3,6 +3,7 @@ import streamlit as st
 from google import genai
 from sentence_transformers import SentenceTransformer
 from supabase import create_client
+import anthropic
 
 # --- CONFIGURACIÓN ---
 st.set_page_config(page_title="Asistente Técnico FANUC", page_icon="🤖")
@@ -10,6 +11,7 @@ st.set_page_config(page_title="Asistente Técnico FANUC", page_icon="🤖")
 SUPABASE_URL = st.secrets["SUPABASE_URL"]
 SUPABASE_KEY = st.secrets["SUPABASE_KEY"]
 GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
+ANTHROPIC_API_KEY = st.secrets["ANTHROPIC_API_KEY"]
 
 SIMILARITY_THRESHOLD = 0.55  # Fase de prueba
 
@@ -17,14 +19,24 @@ SIMILARITY_THRESHOLD = 0.55  # Fase de prueba
 # CACHE DE MODELOS
 # --------------------------------------------------
 
+#@st.cache(allow_output_mutation=True)
+#def load_models():
+#    embedding_model = SentenceTransformer(
+#        "BAAI/bge-large-en-v1.5",
+#        trust_remote_code=True
+#    )
+#    gemini_client = genai.Client(api_key=GEMINI_API_KEY)
+#    return embedding_model, gemini_client
+
+#ANTHROPIC***************************************
 @st.cache(allow_output_mutation=True)
 def load_models():
     embedding_model = SentenceTransformer(
         "BAAI/bge-large-en-v1.5",
         trust_remote_code=True
     )
-    gemini_client = genai.Client(api_key=GEMINI_API_KEY)
-    return embedding_model, gemini_client
+    anthropic_client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+    return embedding_model, anthropic_client
 
 
 @st.cache(allow_output_mutation=True)
@@ -32,7 +44,8 @@ def init_supabase():
     return create_client(SUPABASE_URL, SUPABASE_KEY)
 
 
-bert_model, gemini_client = load_models()
+#bert_model, gemini_client = load_models()
+bert_model, anthropic_client = load_models()
 supabase_client = init_supabase()
 
 # --------------------------------------------------
@@ -235,12 +248,25 @@ CONTEXTO:
 
         try:
 
-            response = gemini_client.models.generate_content(
-                model="gemini-2.5-flash",
-                contents=f"{instruccion}\n\nPREGUNTA:\n{pregunta}"
-            )
+            #response = gemini_client.models.generate_content(
+            #    model="gemini-2.5-flash",
+            #    contents=f"{instruccion}\n\nPREGUNTA:\n{pregunta}"
+            #)
 
-            answer = response.text
+            #answer = response.text
+
+            response = anthropic_client.messages.create(
+                model="claude-3-5-sonnet-20241022",
+                max_tokens=1000,
+                temperature=0,
+                messages=[
+                    {
+                        "role": "user",
+                        "content": f"{instruccion}\n\nPREGUNTA:\n{pregunta}"
+                    }
+                ]        
+            )
+            answer = response.content[0].text
 
         except Exception as e:
 
