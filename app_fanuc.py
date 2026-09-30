@@ -3,7 +3,7 @@ import streamlit as st
 from google import genai
 from sentence_transformers import SentenceTransformer
 from supabase import create_client
-import anthropic
+#import anthropic
 
 # --- CONFIGURACIÓN ---
 st.set_page_config(page_title="Asistente Técnico FANUC", page_icon="🤖")
@@ -30,7 +30,8 @@ def load_models():
 
 
 
-@st.cache(allow_output_mutation=True)
+#@st.cache(allow_output_mutation=True)
+@st.cache_resource
 def init_supabase():
     return create_client(SUPABASE_URL, SUPABASE_KEY)
 
