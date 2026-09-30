@@ -19,7 +19,8 @@ SIMILARITY_THRESHOLD = 0.55  # Fase de prueba
 # CACHE DE MODELOS
 # --------------------------------------------------
 
-@st.cache(allow_output_mutation=True)
+#@st.cache(allow_output_mutation=True)
+@st.cache_resource
 def load_models():
     embedding_model = SentenceTransformer(
         "BAAI/bge-large-en-v1.5",
